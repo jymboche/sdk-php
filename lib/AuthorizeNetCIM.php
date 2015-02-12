@@ -61,6 +61,22 @@ class AuthorizeNetCIM extends AuthorizeNetRequest
         $this->_addObject($profile, $customerProfile);
         return $this->_sendRequest();
     }
+
+    /**
+     * Create a customer profile.
+     *
+     * @param string $transId
+     * @param string               $validationMode
+     *
+     * @return AuthorizeNetCIM_Response
+     */
+    public function createCustomerProfileFromTransaction($transId, $validationMode = "none")
+    {
+        $this->_validationMode = $validationMode;
+        $this->_constructXml("createCustomerProfileFromTransactionRequest");
+        $this->_xml->addChild("transId", $transId);
+        return $this->_sendRequest();
+    }
     
     /**
      * Create a customer payment profile.
