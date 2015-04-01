@@ -99,7 +99,7 @@ abstract class AuthorizeNetRequest
 			}
 			return false;
         }
-        
+
         if (preg_match('/xml/',$post_url)) {
             curl_setopt($curl_request, CURLOPT_HTTPHEADER, Array("Content-Type: text/xml"));
         }

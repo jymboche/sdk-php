@@ -50,7 +50,7 @@ class AuthorizeNetAIM extends AuthorizeNetRequest
      * Default values are provided for best practice fields.
      */
     protected $_x_post_fields = array(
-        "version" => "3.1", 
+        "version" => "3.1",
         "delim_char" => ",",
         "delim_data" => "TRUE",
         "relay_response" => "FALSE",
